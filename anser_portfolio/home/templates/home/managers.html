@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>managment</title>
+    <style>
+       table{
+        border: 1px solid black;
+       }
+        td{
+            border: 1px solid black;
+            padding:10px 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>all info will be shown here</h1>
+
+
+    <h1>{{cli}}</h1>
+
+    {% if cli %}
+    <h1>i found some data</h1>
+    <table style>
+        <thead>
+            <td>id </td>
+            <td>clint name</td>
+            <td>client email</td>
+            <td>client message</td>
+        </thead>
+        <tbody>
+            {% for client in cli %}
+            <tr>
+                <td>{{client.id}}</td>
+                <td>{{client.c_name}}</td>
+                <td>{{client.c_email}}</td>
+                <td>{{client.c_message}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   
+    <br>
+    {% else %}
+    <h1>i found no data</h1>
+    {% endif %}
+
+<a href="/">go back</a>
+
+</body>
+</html>

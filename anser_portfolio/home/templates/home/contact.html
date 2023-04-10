@@ -1,0 +1,68 @@
+<section
+class="container-fluid section1 row grid section2 m-0"
+style="height: auto !important" id="contact"
+>
+<div
+  class="container d-flex justify-content-center contact porfoliodiv cwsection tesdiv"
+>
+  <div class="bulb">
+    <img src="/static/media/spiral.png" alt="" />
+  </div>
+  <div class="pbox">
+    <label for="" class="dot"></label>
+    <label for="" style="height: 30px">Contact me</label>
+  </div>
+  <h1 id="pboxh" style="color: #ffff; display: inline-block">
+    Let's build something together
+    <img
+      src="/static/media/handshake.svg"
+      alt=""
+      style="height: 50px"
+    />
+  </h1>
+  <label for="" id="des"
+    >More than <label for=""> 3 years</label> in the game and just
+    getting started.</label
+  >
+</div>
+<div class="container-fluid">
+  
+    <form action="" method="post" class="container contactdiv">
+      {% csrf_token %}
+     {% comment %} <input type="text" id="nme" placeholder="Enter your name" />
+    <input type="text" id="emi" placeholder="Enter your e-mail" />
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="Enter your message"
+    ></textarea>  {% endcomment %}
+    
+    {{clientform.name}}
+    {{clientform.email}}
+    {{clientform.message}}
+    <input type="submit" value = "Send Message" class="btn-main msgbtn">
+  </form>
+  
+</div>
+
+<footer class="footer">
+  <div class="directcontct">
+    <h6>
+      <img src="/static/media/atSign_grey.svg" alt="" class="atsign" />
+      ansranser@gmail.com
+    </h6>
+    <h1>|</h1>
+    <h6>
+      <img src="/static/media/phone_grey.svg" alt="" class="phone" />
+      +92 3247085009
+    </h6>
+  </div>
+  <div class="socialmeet">
+    <a href=""><img src="/static/media/twitter_white.svg" alt="" /></a>
+    <a href=""><img src="/static/media/linkedin_white.svg" alt="" /></a>
+    <a href=""><img src="/static/media/github_4.svg" alt="" /></a>
+  </div>
+</footer>
+</section>
